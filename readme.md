@@ -2,6 +2,7 @@ Advanced Market Risk Framework & Hedging Optimizer
 
 A comprehensive Market Risk framework designed for the analysis, forecasting, and mitigation of risk in global multi-asset portfolios. Developed with a quantitative focus, this tool integrates classical econometrics, Machine Learning, and evolutionary algorithms to address high-volatility regimes and "Black Swan" events.
 link streamlit: https://market-risk-managment-alvarez.streamlit.app/
+
 🚀 Core Features
 1. Data Integrity & Fixed Income Modeling
 Automated Outlier Mitigation: Robust preprocessing pipeline for handling anomalies and correcting non-physical returns (e.g., negative oil prices).
@@ -44,3 +45,4 @@ Plaintext
 ├── research_scripts.ipynb # Model development & validation
 ├── requirements.txt      # Project dependencies
 └── README.md             # Technical documentation
+
