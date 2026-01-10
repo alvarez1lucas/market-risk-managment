@@ -1,45 +1,46 @@
-# 📉 Advanced Market Risk Framework & Hedging Optimizer
+Advanced Market Risk Framework & Hedging Optimizer
 
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge.svg)](TU_URL_DE_STREAMLIT_AQUI)
+A comprehensive Market Risk framework designed for the analysis, forecasting, and mitigation of risk in global multi-asset portfolios. Developed with a quantitative focus, this tool integrates classical econometrics, Machine Learning, and evolutionary algorithms to address high-volatility regimes and "Black Swan" events.
+link streamlit: https://market-risk-managment-alvarez.streamlit.app/
+🚀 Core Features
+1. Data Integrity & Fixed Income Modeling
+Automated Outlier Mitigation: Robust preprocessing pipeline for handling anomalies and correcting non-physical returns (e.g., negative oil prices).
 
-Este framework integral de Riesgo de Mercado permite el análisis, la predicción y la mitigación de riesgos en portafolios globales. Desarrollado con un enfoque cuantitativo, combina econometría clásica, Machine Learning y algoritmos evolutivos para enfrentar escenarios de alta volatilidad y eventos de "Cisne Negro".
+Bond Risk Engine: Dynamic duration-based sensitivity adjustment for sovereign bonds (US, UK, GER, JPN), converting yield fluctuations into realistic price returns.
 
----
+2. Dynamic Risk Modeling (ML & GARCH)
+DCC-GARCH: Implementation of conditional volatility models to capture volatility clustering and persistence.
 
-## 🚀 Características Principales
+XGBoost Risk Predictor: Leverages Machine Learning to forecast the 99% VaR based on macro-driven features, including the VIX index and the Yield Curve spread (10Y-2Y).
 
-### 1. Ingeniería de Datos y Valuación de Bonos
-* **Limpieza Nuclear:** Manejo automatizado de outliers y corrección de retornos imposibles (ej. Precios de petróleo negativos).
-* **Bond Risk Engine:** Ajuste dinámico de sensibilidad mediante Duración para bonos soberanos (US, UK, GER, JPN), convirtiendo yields en retornos de precio reales.
+3. Stress Testing & Extreme Value Theory (EVT)
+t-Copula Monte Carlo: High-fidelity simulation of 100,000 scenarios, capturing non-linear tail dependence and crash correlations.
 
-### 2. Modelado de Riesgo Dinámico (ML & GARCH)
-* **DCC-GARCH:** Implementación de modelos de volatilidad condicional para capturar el "volatility clustering".
-* **XGBoost Risk Predictor:** Uso de Machine Learning para predecir el VaR 99% basado en variables macroeconómicas como el VIX y el spread de la curva de rendimientos (10Y-2Y).
+Extreme Value Theory (EVT): Fits a Generalized Pareto Distribution (GPD) to model the distribution of losses, calculating Expected Shortfall (ES) at 99.9% in alignment with Basel III regulatory standards.
 
-### 3. Stress Test y Teoría de Valores Extremos (EVT)
-* **t-Copula Monte Carlo:** Simulación de 100,000 escenarios capturando dependencias extremas y correlaciones de crisis (*Crash Correlation*).
-* **Extreme Value Theory (EVT):** Ajuste de la Distribución de Pareto Generalizada (GPD) para calcular el **Expected Shortfall (ES) al 99.9%**, cumpliendo con los estándares de Basilea III.
+4. Hedging Optimizer (Differential Evolution)
+Evolutionary Optimization: Utilizes the Differential Evolution heuristic to identify the optimal hedging policy.
 
-### 4. Optimizador de Hedging (Differential Evolution)
-* **Evolución Diferencial:** Algoritmo heurístico para encontrar la política de cobertura óptima.
-* **Target de Optimización:** Minimización del riesgo de cola (Expected Shortfall) ajustado por costos de fricción y transacción.
-* **Implementación Turbo:** Motor vectorizado en NumPy que reduce el tiempo de cómputo en un 95%.
+Target-Based Optimization: Minimizes tail-risk (Expected Shortfall) while accounting for friction costs and transaction slippage.
 
----
+Vectorized Execution: High-performance NumPy-based engine that reduces computation time by 95%.
 
-## 🛠️ Stack Tecnológico
-* **Lenguaje:** Python 3.11+
-* **Framework:** Streamlit
-* **Análisis de Datos:** Pandas, NumPy (Vectorización)
-* **Modelos Cuantitativos:** SciPy (Optimization), Arch (GARCH), Scikit-Learn, XGBoost.
-* **Visualización:** Matplotlib, Seaborn.
+🛠️ Tech Stack
+Language: Python 3.11+
 
----
+Framework: Streamlit
 
-## 📊 Estructura del Proyecto
-```text
-├── app_market_risk.py    # Aplicación principal de Streamlit
-├── csv_final_datos.csv   # Dataset de activos globales (Bonos, Equities, Commodities)
-├── outputs.ipynb         # Scripts
-├── requirements.txt      # Dependencias del proyecto
-└── README.md             # Documentación técnica
+Data Engineering: Pandas, NumPy (Vectorized Computation)
+
+Quantitative Libraries: SciPy (Optimization), Arch (GARCH), Scikit-Learn, XGBoost.
+
+Visualization: Matplotlib, Seaborn.
+
+📊 Project Structure
+Plaintext
+
+├── app_market_risk.py    # Main Streamlit Application
+├── csv_final_datos.csv   # Global Multi-Asset Dataset (Bonds, Equities, Commodities)
+├── research_scripts.ipynb # Model development & validation
+├── requirements.txt      # Project dependencies
+└── README.md             # Technical documentation
