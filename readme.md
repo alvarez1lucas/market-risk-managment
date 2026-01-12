@@ -47,4 +47,6 @@ Plaintext
 ├── requirements.txt      # Project dependencies
 └── README.md             # Technical documentation
 
+**Developed by Lucas Alvarez** [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/lucas-alvarez-2b7b092b1/)
+
 
